@@ -46,12 +46,15 @@ st.title("🇵🇪 Alerta Temprana en Salud Pública")
 st.subheader("Caso 2: Predicción de Hospitalización Prioritaria por Dengue")
 st.caption("Dataset: Casos de Dengue - Centro Nacional de Epidemiología (MINSA)")
 
-st.info(
-    "🧠 **Modelo utilizado: SVM con Kernel RBF (C=100)**\n\n"
-    "Seleccionado por su mejor equilibrio entre Accuracy y Recall "
-    "(Recall = 67% en la clase 'requiere hospitalización'), frente a "
-    "Random Forest, SVM Lineal y KNN."
-)
+st.markdown("""
+<div style="border-left: 4px solid #d62728; background-color: #fff5f5; padding: 12px 16px; border-radius: 4px; margin-top: 10px;">
+<b>Modelo en producción: SVM &mdash; Kernel RBF, C = 100</b><br>
+De los 4 algoritmos evaluados (Random Forest, SVM RBF, SVM Lineal, KNN), este fue el
+único que detectó una proporción clínicamente aceptable de casos graves: Recall = 66.9%
+en la clase "requiere hospitalización" (457 Falsos Negativos), frente al 9.3% de Random
+Forest y el 7.1% de KNN.
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 st.markdown("### Ingresa los datos del paciente")
