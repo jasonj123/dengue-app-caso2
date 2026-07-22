@@ -45,7 +45,13 @@ X_COLS = ['ano', 'semana', 'edad', 'departamento_enc', 'provincia_enc',
 st.title("🇵🇪 Alerta Temprana en Salud Pública")
 st.subheader("Caso 2: Predicción de Hospitalización Prioritaria por Dengue")
 st.caption("Dataset: Casos de Dengue - Centro Nacional de Epidemiología (MINSA)")
-st.caption("Modelo: SVM con Kernel RBF (C=100) — seleccionado por su mejor equilibrio entre Accuracy y Recall (Recall=67% en la clase 'requiere hospitalización') frente a Random Forest, SVM Lineal y KNN.")
+
+st.info(
+    "🧠 **Modelo utilizado: SVM con Kernel RBF (C=100)**\n\n"
+    "Seleccionado por su mejor equilibrio entre Accuracy y Recall "
+    "(Recall = 67% en la clase 'requiere hospitalización'), frente a "
+    "Random Forest, SVM Lineal y KNN."
+)
 
 st.markdown("---")
 st.markdown("### Ingresa los datos del paciente")
